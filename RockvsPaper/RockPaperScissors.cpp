@@ -63,7 +63,6 @@ char ComputersPick()
 	int random;
 	srand(time(NULL));
 	random = rand() % 3 + 1;
-	cout << random <<  endl;
 	switch (random)
 	{
 	case 1: return 'R';
@@ -72,6 +71,5 @@ char ComputersPick()
 		break;
 	case 3: return 'S';
 		break;
-	default: return NULL;
 	}
 }
