@@ -3,10 +3,12 @@
 #include <stdlib.h> 
 
 using namespace std;
+
 void Scissors(char, char);
 void Rock(char, char);
 void Paper(char, char);
 char ComputersPick();
+
 int main()
 {
 	bool boolean;
@@ -16,7 +18,7 @@ int main()
 		boolean = false;
 		char player;
 		char comp = ComputersPick();
-		cout << "rock,paper, or scissors Please enter your choice as the first letter of each (Uppercase)" << endl;
+		cout << "rock, paper, or scissors Please enter your choice as the first letter of each (Uppercase)" << endl;
 		cin >> player;
 		if (comp == player)
 		{
@@ -72,4 +74,5 @@ char ComputersPick()
 	case 3: return 'S';
 		break;
 	}
+	return 0;
 }
