@@ -3,9 +3,9 @@
 #include <stdlib.h> 
 
 using namespace std;
-void SvP(char, char);
-void PvR(char, char);
-void RvS(char, char);
+void Scissors(char, char);
+void Rock(char, char);
+void Paper(char, char);
 char ComputersPick();
 int main()
 {
@@ -25,17 +25,17 @@ int main()
 	    }
 			switch (player)
 			{
-			case 'S': RvS(comp, player);
+			case 'S': Scissors(comp, player);
 				break;
-			case 'R': PvR(comp, player);
+			case 'R': Rock(comp, player);
 				break;
-			case 'P': SvP(comp, player);
+			case 'P': Paper(comp, player);
 				break;
 			}
 	} while (boolean);
 	return 0;
 }
-void SvP(char computer, char player)
+void Paper(char computer, char player)
 {
 	if (computer == 'S')
 		cout << "The Computer wins" << endl;
@@ -43,7 +43,7 @@ void SvP(char computer, char player)
 		cout << "You win" << endl;
 }
 
-void PvR(char computer, char player)
+void Rock(char computer, char player)
 {
 	if (computer == 'P')
 		cout << "The Computer wins" << endl;
@@ -51,7 +51,7 @@ void PvR(char computer, char player)
 		cout << "You win" << endl;
 }
 
-void RvS(char computer, char player)
+void Scissors(char computer, char player)
 {
 	if (computer == 'R')
 		cout << "The Computer wins" << endl;
